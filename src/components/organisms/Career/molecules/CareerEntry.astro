@@ -1,0 +1,38 @@
+---
+import Link from "../../../atoms/Link.astro";
+import Text from "../../../atoms/Text.astro";
+import Skills from "./Skills.svelte";
+
+interface Props {
+  period: string;
+  role: string;
+  company: {
+    name: string;
+    url: string;
+  };
+  skills: string[];
+}
+
+const { role, period, company, skills } = Astro.props;
+---
+
+<li class="root">
+  <Text size="6">{period}</Text>
+
+  <Text size="4">
+    {role} at <Link href={company.url} target="_blank">{company.name}</Link>
+  </Text>
+
+  <Text color="muted">
+    <slot />
+  </Text>
+
+  <Skills client:only="svelte" {skills} />
+</li>
+
+<style>
+  .root {
+    display: flex;
+    flex-direction: column;
+  }
+</style>

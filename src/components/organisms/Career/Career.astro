@@ -1,0 +1,70 @@
+---
+import Heading from "../../atoms/Heading.astro";
+import CareerEntry from "./molecules/CareerEntry.astro";
+---
+
+<section>
+  <Heading class="main-title" size="8" weight="regular"> Career </Heading>
+
+  <ul>
+    <CareerEntry
+      period="2022 - 2024"
+      role="Founding Engineer"
+      company={{ name: "Arro", url: "https://www.arro.co" }}
+      skills={[
+        "node.js",
+        "sveltekit",
+        "effect.js",
+        "docker",
+        "postgresql",
+        "redis",
+        "open-ai",
+        "typescript",
+        "playwright",
+      ]}
+    >
+      I joined Arro as one of the founding engineers, tasked with developing an
+      AI Research Assistant to support teams in crafting superior products.
+    </CareerEntry>
+
+    <CareerEntry
+      period="2018 - 2022"
+      role="Lead Frontend Developer"
+      company={{ name: "Rows", url: "https://www.rows.com" }}
+      skills={["typescript", "react", "konva", "mobx", "graphql", "flutter"]}
+    >
+      Joined Rows at an early stage to help build the next generation of
+      spreadsheet tools.
+    </CareerEntry>
+
+    <CareerEntry
+      period="2014 - 2018"
+      role="Senior Fullstack Developer"
+      company={{ name: "PaddyPower - Betfair", url: "https://www.rows.com" }}
+      skills={["node.js", "angular.js"]}
+    >
+      At PaddyPower Betfair, my team led the development of a platform aimed at
+      accelerating the creation and distribution of new internal tools.
+    </CareerEntry>
+  </ul>
+</section>
+
+<style>
+  section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    max-inline-size: 50ch;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-7);
+  }
+
+  li {
+    display: flex;
+    flex-direction: column;
+  }
+</style>

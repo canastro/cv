@@ -1,0 +1,52 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Heading from "../components/atoms/Heading.astro";
+import Container from "../components/atoms/Container.astro";
+import Career from "../components/organisms/Career/Career.astro";
+import About from "../components/organisms/About/About.astro";
+import Contacts from "../components/organisms/Contacts/Contacts.astro";
+---
+
+<Layout title="Ricardo Canastro - CV">
+  <Container class="main-container" size="4">
+    <Heading class="main-title" size="9" weight="regular">
+      Hello 👋<br />I am Ricardo Canastro, <br /> a Fullstack Software Developer
+      <br /> based in Portugal, specializing in frontend development.
+    </Heading>
+
+    <div class="content">
+      <About />
+      <Career />
+    </div>
+
+    <Contacts />
+  </Container>
+</Layout>
+
+<style>
+  :global(.main-container) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: var(--space-7);
+    padding-block: var(--space-9);
+    min-block-size: 100dvh;
+  }
+
+  :global(.main-title) {
+    max-inline-size: 30ch;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-9);
+  }
+
+  @media screen and (max-width: 1024px) {
+    .content {
+      flex-direction: column;
+    }
+  }
+</style>

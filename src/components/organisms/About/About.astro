@@ -1,0 +1,51 @@
+---
+import Heading from "../../atoms/Heading.astro";
+import Text from "../../atoms/Text.astro";
+---
+
+<section>
+  <Heading class="main-title" size="8" weight="regular"> About me </Heading>
+
+  <div class="content">
+    <img src="/images/avatar.jpeg" alt="Ricardo Canastro" />
+
+      <Text as="p"
+        >My name is Ricardo Canastro, a 37-year-old Software Developer from
+        Porto, Portugal, proud father of two and blessed with a beautiful wife.
+      </Text>
+
+      <Text as="p"
+        >From my earliest years, I found myself captivated by computers,
+        undoubtedly fueled by my love for gaming. With over 13 years of
+        immersion in the software development industry, I can affirm my
+        unwavering dedication to my profession. My thirst for knowledge is
+        unyielding, and I am committed to both expanding my expertise and
+        imparting it to others.
+      </Text>
+  </div>
+</section>
+
+<style>
+  section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+
+  img {
+    max-inline-size: 15rem;
+    border-radius: var(--radius-3);
+  }
+
+  @media screen and (min-width: 768px) {
+    .content {
+      inline-size: 50ch;
+    }
+  }
+</style>

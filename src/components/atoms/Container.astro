@@ -1,0 +1,44 @@
+---
+interface Props {
+  class?: string;
+  size: "1" | "2" | "3" | "4";
+  as: "main" | "div" | "section";
+}
+
+const { as: As = "div", size = "3" } = Astro.props;
+---
+
+<As class:list={[Astro.props.class, "container", `container-size-${size}`]}>
+  <slot />
+</As>
+
+<style>
+  .container {
+    margin-inline: auto;
+    padding-inline: var(--space-9);
+    box-sizing: border-box;
+  }
+
+  .container-size-1 {
+    max-inline-size: var(--container-1);
+    inline-size: 100%;
+  }
+
+  .container-size-2 {
+    max-inline-size: var(--container-2);
+    inline-size: 100%;
+  }
+
+  .container-size-3 {
+    max-inline-size: var(--container-3);
+    inline-size: 100%;
+  }
+
+  .container-size-4 {
+    max-inline-size: var(--container-4);
+    inline-size: 100%;
+  }
+
+
+
+</style>

@@ -1,0 +1,110 @@
+---
+interface Props {
+  size: "1" | "2" | "3" | "4" | "5" | "6";
+  as: "span" | "div" | "label" | "p";
+  class?: string;
+  weight?: "light" | "regular" | "medium" | "bold";
+  style?: 'normal' | 'italic';
+  color: 'default' | 'muted';
+}
+
+const { as: As = "span", size = "3", weight, style, color } = Astro.props;
+---
+
+<As
+  class:list={[
+    Astro.props.class,
+    "text",
+    size ? `text-size-${size}` : undefined,
+    weight ? `text-weight-${weight}` : undefined,
+    style ? `text-style-${style}` : undefined,
+    color ? `text-color-${color}` : undefined,
+  ]}
+>
+  <slot />
+</As>
+
+<style>
+  .text {
+    font-family: var(--default-font-family);
+    font-style:;
+  }
+
+  .text-color-muted {
+    color: var(--text-color-muted);
+  }
+
+  .text-style-italic {
+    font-style: italic;
+  }
+
+  .text-weight-light {
+    font-weight: var(--font-weight-light);
+  }
+
+  .text-weight-regular {
+    font-weight: var(--font-weight-regular);
+  }
+
+  .text-weight-medium {
+    font-weight: var(--font-weight-medium);
+  }
+
+  .text-weight-bold {
+    font-weight: var(--font-weight-bold);
+  }
+
+  .text-size-1 {
+    font-size: var(--font-size-1);
+    line-height: var(--line-height-1);
+    letter-spacing: var(--letter-spacing-1);
+  }
+
+  .text-size-2 {
+    font-size: var(--font-size-2);
+    line-height: var(--line-height-2);
+    letter-spacing: var(--letter-spacing-2);
+  }
+
+  .text-size-3 {
+    font-size: var(--font-size-3);
+    line-height: var(--line-height-3);
+    letter-spacing: var(--letter-spacing-3);
+  }
+
+  .text-size-4 {
+    font-size: var(--font-size-4);
+    line-height: var(--line-height-4);
+    letter-spacing: var(--letter-spacing-4);
+  }
+
+  .text-size-5 {
+    font-size: var(--font-size-5);
+    line-height: var(--line-height-5);
+    letter-spacing: var(--letter-spacing-5);
+  }
+
+  .text-size-6 {
+    font-size: var(--font-size-6);
+    line-height: var(--line-height-6);
+    letter-spacing: var(--letter-spacing-6);
+  }
+
+  .text-size-7 {
+    font-size: var(--font-size-7);
+    line-height: var(--line-height-7);
+    letter-spacing: var(--letter-spacing-7);
+  }
+
+  .text-size-8 {
+    font-size: var(--font-size-8);
+    line-height: var(--line-height-8);
+    letter-spacing: var(--letter-spacing-8);
+  }
+
+  .text-size-9 {
+    font-size: var(--font-size-9);
+    line-height: var(--line-height-9);
+    letter-spacing: var(--letter-spacing-9);
+  }
+</style>

@@ -1,0 +1,285 @@
+:root {
+  --background-color: #f3f4ef;
+  --text-color: #111;
+  --text-color-muted: #5f5f5f;
+
+
+  --container-1: 448px;
+  --container-2: 688px;
+  --container-3: 880px;
+  --container-4: 1136px;
+  
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 2.5rem;
+  --space-8: 3rem;
+  --space-9: 4rem;
+
+
+  --radius-1: 3px;
+  --radius-2: 4px;
+  --radius-3: 6px;
+  --radius-4: 8px;
+  --radius-5: 12px;
+  --radius-6: 16px;
+  --radius-full: 9999px;
+
+  --primary-bg-hover: var(--primary-highlight);
+  --primary-bg-active: rgba(29, 74, 255, 0.2);
+  --bg-charcoal: #2d2d2d;
+  --bg-bridge: #ebece8;
+  --radius: 0.375rem;
+  --radius-sm: 0.25rem;
+  --shadow-elevation: 0px 16px 16px -16px rgba(0, 0, 0, 0.35);
+  --modal-shadow-elevation: 0px 16px 16px -16px rgba(0, 0, 0, 0.35);
+  --opacity-disabled: 0.6;
+  --blue: #597dce;
+  --purple: #c278cf;
+  --green: var(--success);
+  --black: var(--default);
+  --purple-light: #dcb1e3;
+  --data-color-1: #1d4aff;
+  --data-color-2: #621da6;
+  --data-color-3: #42827e;
+  --data-color-4: #ce0e74;
+  --data-color-5: #f14f58;
+  --data-color-6: #7c440e;
+  --data-color-7: #529a0a;
+  --data-color-8: #0476fb;
+  --data-color-9: #fe729e;
+  --data-color-10: #35416b;
+  --data-color-11: #41cbc4;
+  --data-color-12: #b64b02;
+  --data-color-13: #e4a604;
+  --data-color-14: #a56eff;
+  --data-color-15: #30d5c8;
+  --primary-highlight: rgba(29, 74, 255, 0.1);
+  --primary-light: #345cff;
+  --primary: #1d4aff;
+  --primary-dark: #1330a6;
+  --danger-highlight: rgba(219, 55, 7, 0.1);
+  --danger-lighter: #ffa599;
+  --danger-light: #df4b20;
+  --danger: #db3707;
+  --danger-dark: #992705;
+  --warning-highlight: rgba(247, 165, 1, 0.1);
+  --warning-light: #f8b633;
+  --warning: #f7a501;
+  --warning-dark: #e09423;
+  --highlight: #e49f2c;
+  --highlight-dark: #ffbd4f;
+  --success-highlight: rgba(56, 134, 0, 0.1);
+  --success-light: #5f9d32;
+  --success: #388600;
+  --success-dark: #245700;
+  --primary-alt-highlight: rgba(53, 65, 107, 0.1);
+  --primary-alt: #35416b;
+  --primary-alt-dark: #222a46;
+  --default: #2d2d2d;
+  --default-dark: #050505;
+  --muted: #5f5f5f;
+  --muted-dark: #403939;
+  --muted-alt: #747ea1;
+  --muted-alt-dark: #515871;
+  --mark: hsla(42, 93%, 86%, 0.8);
+  --white: #fff;
+  --bg-light: #fff;
+  --side: #fafaf9;
+  --mid: #f2f2f2;
+  --border: rgba(0, 0, 0, 0.15);
+  --border-light: rgba(0, 0, 0, 0.08);
+  --border-bold: rgba(0, 0, 0, 0.24);
+  --border-active: rgba(0, 0, 0, 0.36);
+  --transparent: transparent;
+  --link: var(--primary-3000);
+  --brand-blue: #1d4aff;
+  --brand-red: #f54e00;
+  --brand-yellow: #f9bd2b;
+  --brand-key: #000;
+  --text-3000-light: #111;
+  --text-secondary-3000-light: hsla(0, 0%, 7%, 0.7);
+  --muted-3000-light: hsla(0, 0%, 7%, 0.6);
+  --trace-3000-light: hsla(0, 0%, 7%, 0.25);
+  --primary-3000-light: #f54e01;
+  --primary-3000-highlight-light: rgba(245, 78, 1, 0.1);
+  --primary-3000-hover-light: #f54e01;
+  --primary-3000-active-light: #f54e01;
+  --secondary-3000-light: hsla(68, 14%, 79%, 0.6);
+  --secondary-3000-hover-light: #cfd1c2;
+  --accent-3000-light: #eeefe9;
+  --bg-3000-light: #f3f4ef;
+  --border-3000-light: #dadbd2;
+  --border-bold-3000-light: #c1c2b9;
+  --glass-bg-3000-light: hsla(69, 12%, 88%, 0.702);
+  --glass-border-3000-light: #e4e5de;
+  --link-3000-light: #f54e00;
+  --primary-3000-frame-bg-light: #eb9d2a;
+  --primary-3000-button-bg-light: #fff;
+  --primary-3000-button-border-light: #b17816;
+  --primary-3000-button-border-hover-light: #8e5b03;
+  --secondary-3000-frame-bg-light: #e1dddd;
+  --secondary-3000-button-bg-light: #f3f4ef;
+  --secondary-3000-button-border-light: #ccc;
+  --secondary-3000-button-border-hover-light: #aaa;
+  --danger-3000-frame-bg-light: rgba(245, 78, 0, 0.502);
+  --danger-3000-button-border-light: #e96b30;
+  --danger-3000-button-border-hover-light: #f54e00;
+  --shadow-elevation-3000-light: 0 3px 0 var(--border-3000-light);
+  --shadow-elevation-3000-dark: 0 3px 0 var(--border-3000-dark);
+  --text-3000-dark: #fff;
+  --text-secondary-3000-dark: hsla(0, 0%, 100%, 0.7);
+  --muted-3000-dark: hsla(0, 0%, 100%, 0.5);
+  --trace-3000-dark: hsla(0, 0%, 100%, 0.25);
+  --primary-3000-dark: #f7a503;
+  --primary-3000-highlight-dark: rgba(247, 165, 3, 0.1);
+  --primary-3000-hover-dark: #f7a503;
+  --primary-3000-active-dark: #f7a503;
+  --primary-alt-highlight-3000-light: #e5e7e0;
+  --secondary-3000-dark: #1d1f27;
+  --secondary-3000-hover-dark: #575d77;
+  --accent-3000-dark: #21242b;
+  --bg-3000-dark: #1d1f27;
+  --border-3000-dark: #35373e;
+  --border-bold-3000-dark: #3f4046;
+  --glass-bg-3000-dark: rgba(36, 38, 42, 0.6);
+  --glass-border-3000-dark: var(--border-3000-dark);
+  --link-3000-dark: #f1a82c;
+  --primary-3000-frame-bg-dark: #926826;
+  --primary-3000-button-bg-dark: #e0a045;
+  --primary-3000-button-border-dark: #b17816;
+  --primary-3000-button-border-hover-dark: #8e5b03;
+  --primary-alt-highlight-3000-dark: #232429;
+  --secondary-3000-frame-bg-dark: #323232;
+  --secondary-3000-button-bg-dark: #1d1f27;
+  --secondary-3000-button-border-dark: #4a4c52;
+  --secondary-3000-button-border-hover-dark: #5e6064;
+  --danger-3000-frame-bg-dark: rgba(245, 78, 0, 0.502);
+  --danger-3000-button-border-dark: #c44003;
+  --danger-3000-button-border-hover-dark: #f54e00;
+  --text-3000: var(--text-3000);
+  --text-secondary-3000: var(--text-secondary-3000);
+  --muted-3000: var(--muted-3000);
+  --trace-3000: var(--trace-3000);
+  --primary-3000: var(--primary-3000);
+  --primary-3000-hover: var(--primary-3000-hover);
+  --secondary-3000: var(--secondary-3000);
+  --secondary-3000-hover: var(--secondary-3000-hover);
+  --accent-3000: var(--accent-3000);
+  --bg-3000: var(--bg-3000-light);
+  --bg-hover-3000: var(--bg-hover-3000);
+  --border-3000: var(--border-3000);
+  --border-bold-3000: var(--border-bold-3000);
+  --glass-bg-3000: var(--glass-bg-3000);
+  --glass-border-3000: var(--border-3000);
+  --link-3000: var(--link-3000);
+  --tooltip-bg: var(--tooltip-bg);
+  --primary-3000-frame-bg: var(--primary-3000-frame-bg);
+  --primary-3000-button-bg: var(--primary-3000-button-bg);
+  --primary-3000-button-border: var(--primary-3000-button-border);
+  --primary-3000-button-border-hover: var(--primary-3000-button-border-hover);
+  --secondary-3000-frame-bg: var(--secondary-3000-frame-bg);
+  --secondary-3000-button-bg: var(--secondary-3000-button-bg);
+  --secondary-3000-button-border: var(--secondary-3000-button-border);
+  --secondary-3000-button-border-hover: var(
+    --secondary-3000-button-border-hover
+  );
+}
+
+body[theme="light"] {
+  --text-3000: var(--text-3000-light);
+  --text-secondary-3000: var(--text-secondary-3000-light);
+  --muted-3000: var(--muted-3000-light);
+  --trace-3000: var(--trace-3000-light);
+  --primary-3000: var(--primary-3000-light);
+  --primary-3000-highlight: var(--primary-3000-highlight-light);
+  --primary-3000-hover: var(--primary-3000-hover-light);
+  --primary-3000-active: var(--primary-3000-active-light);
+  --secondary-3000: var(--secondary-3000-light);
+  --secondary-3000-hover: var(--secondary-3000-hover-light);
+  --accent-3000: var(--accent-3000-light);
+  --bg-3000: var(--bg-3000-light);
+  --border-3000: var(--border-3000-light);
+  --border-light-opaque: #eee;
+  --border-bold-3000: var(--border-bold-3000-light);
+  --glass-bg-3000: var(--glass-bg-3000-light);
+  --glass-border-3000: var(--glass-border-3000-light);
+  --bg-light: #fff;
+  --bg-table: #f9faf7;
+  --link: var(--link-3000-light);
+  --shadow-elevation-3000: var(--shadow-elevation-3000-light);
+  --primary-3000-frame-bg: var(--primary-3000-frame-bg-light);
+  --primary-3000-button-bg: var(--primary-3000-button-bg-light);
+  --primary-3000-button-border: var(--primary-3000-button-border-light);
+  --primary-3000-button-border-hover: var(
+    --primary-3000-button-border-hover-light
+  );
+  --primary-alt-highlight-3000: var(--primary-alt-highlight-3000-light);
+  --secondary-3000-frame-bg: var(--secondary-3000-frame-bg-light);
+  --secondary-3000-button-bg: var(--secondary-3000-button-bg-light);
+  --secondary-3000-button-border: var(--secondary-3000-button-border-light);
+  --secondary-3000-button-border-hover: var(
+    --secondary-3000-button-border-hover-light
+  );
+  --danger-3000-frame-bg: var(--danger-3000-frame-bg-light);
+  --danger-3000-button-border: var(--danger-3000-button-border-light);
+  --danger-3000-button-border-hover: var(
+    --danger-3000-button-border-hover-light
+  );
+}
+
+body[theme="dark"] {
+  --text-3000: var(--text-3000-dark);
+  --text-secondary-3000: var(--text-secondary-3000-dark);
+  --muted-3000: var(--muted-3000-dark);
+  --trace-3000: var(--trace-3000-dark);
+  --primary-3000: var(--primary-3000-dark);
+  --primary-3000-highlight: var(--primary-3000-highlight-dark);
+  --primary-3000-hover: var(--primary-3000-hover-dark);
+  --primary-3000-active: var(--primary-3000-active-dark);
+  --secondary-3000: var(--secondary-3000-dark);
+  --secondary-3000-hover: var(--secondary-3000-hover-dark);
+  --accent-3000: var(--accent-3000-dark);
+  --bg-3000: var(--bg-3000-dark);
+  --border-3000: var(--border-3000-dark);
+  --border-light-opaque: #1e2028;
+  --border-bold-3000: var(--border-bold-3000-dark);
+  --glass-bg-3000: var(--glass-bg-3000-dark);
+  --glass-border-3000: var(--glass-border-3000-dark);
+  --bg-light: var(--accent-3000);
+  --bg-table: #232429;
+  --brand-key: #fff;
+  --link: var(--link-3000-dark);
+  --shadow-elevation-3000: var(--shadow-elevation-3000-dark);
+  --primary-3000-frame-bg: var(--primary-3000-frame-bg-dark);
+  --primary-3000-button-bg: var(--primary-3000-button-bg-dark);
+  --primary-3000-button-border: var(--primary-3000-button-border-dark);
+  --primary-3000-button-border-hover: var(
+    --primary-3000-button-border-hover-dark
+  );
+  --primary-alt-highlight-3000: var(--primary-alt-highlight-3000-dark);
+  --secondary-3000-frame-bg: var(--secondary-3000-frame-bg-dark);
+  --secondary-3000-button-bg: var(--secondary-3000-button-bg-dark);
+  --secondary-3000-button-border: var(--secondary-3000-button-border-dark);
+  --secondary-3000-button-border-hover: var(
+    --secondary-3000-button-border-hover-dark
+  );
+  --danger-3000-frame-bg: var(--danger-3000-frame-bg-dark);
+  --danger-3000-button-border: var(--danger-3000-button-border-dark);
+  --danger-3000-button-border-hover: var(
+    --danger-3000-button-border-hover-dark
+  );
+  --data-color-2: #7f26d9;
+  --data-color-3: #3e7a76;
+  --data-color-4: #bf0d6c;
+  --data-color-5: #f0474f;
+  --data-color-6: #b36114;
+  --data-color-10: #6576b3;
+}
+
+body {
+  color: var(--text-color);
+}
