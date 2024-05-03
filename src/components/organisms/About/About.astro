@@ -11,13 +11,15 @@ import Text from "../../atoms/Text.astro";
   </Heading>
 
   <div class="content">
-    <Img
-      src="/images/avatar.jpeg"
-      alt="Ricardo Canastro"
-      height={240}
-      width={240}
-      placeholder="tracedSVG"
-    />
+    <div class="avatar">
+      <Img
+        src="/images/avatar.jpeg"
+        alt="Ricardo Canastro"
+        height={240}
+        width={240}
+        placeholder="tracedSVG"
+      />
+    </div>
 
     <Text as="p">
       My name is Ricardo Canastro, a 37-year-old Software Developer from Porto,
@@ -47,9 +49,10 @@ import Text from "../../atoms/Text.astro";
     gap: var(--space-5);
   }
 
-  img {
-    max-inline-size: 15rem;
+  .avatar {
     border-radius: var(--radius-3);
+    inline-size: fit-content;
+    overflow: hidden;
   }
 
   @media screen and (min-width: 768px) {

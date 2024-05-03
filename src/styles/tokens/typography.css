@@ -1,42 +1,62 @@
 /* archivo-latin-300-normal */
 @font-face {
-    font-family: 'Archivo';
-    font-style: normal;
-    font-display: swap;
-    font-weight: 300;
-    src: url(@fontsource/archivo/files/archivo-latin-300-normal.woff2) format('woff2'), url(@fontsource/archivo/files/archivo-latin-300-normal.woff) format('woff');
-    unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
-  }
-  
-  /* archivo-latin-400-normal */
-  @font-face {
-    font-family: 'Archivo';
-    font-style: normal;
-    font-display: swap;
-    font-weight: 400;
-    src: url(@fontsource/archivo/files/archivo-latin-400-normal.woff2) format('woff2'), url(@fontsource/archivo/files/archivo-latin-400-normal.woff) format('woff');
-    unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
-  }
-  
-  /* archivo-latin-500-normal */
-  @font-face {
-    font-family: 'Archivo';
-    font-style: normal;
-    font-display: swap;
-    font-weight: 500;
-    src: url(@fontsource/archivo/files/archivo-latin-500-normal.woff2) format('woff2'), url(@fontsource/archivo/files/archivo-latin-500-normal.woff) format('woff');
-    unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
-  }
-  
-  /* archivo-latin-700-normal */
-  @font-face {
-    font-family: 'Archivo';
-    font-style: normal;
-    font-display: swap;
-    font-weight: 700;
-    src: url(@fontsource/archivo/files/archivo-latin-700-normal.woff2) format('woff2'), url(@fontsource/archivo/files/archivo-latin-700-normal.woff) format('woff');
-    unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
-  }
+  font-family: "Archivo";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 300;
+  src:
+    url(@fontsource/archivo/files/archivo-latin-300-normal.woff2)
+      format("woff2"),
+    url(@fontsource/archivo/files/archivo-latin-300-normal.woff) format("woff");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
+    U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* archivo-latin-400-normal */
+@font-face {
+  font-family: "Archivo";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src:
+    url(@fontsource/archivo/files/archivo-latin-400-normal.woff2)
+      format("woff2"),
+    url(@fontsource/archivo/files/archivo-latin-400-normal.woff) format("woff");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
+    U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* archivo-latin-500-normal */
+@font-face {
+  font-family: "Archivo";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 500;
+  src:
+    url(@fontsource/archivo/files/archivo-latin-500-normal.woff2)
+      format("woff2"),
+    url(@fontsource/archivo/files/archivo-latin-500-normal.woff) format("woff");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
+    U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* archivo-latin-700-normal */
+@font-face {
+  font-family: "Archivo";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src:
+    url(@fontsource/archivo/files/archivo-latin-700-normal.woff2)
+      format("woff2"),
+    url(@fontsource/archivo/files/archivo-latin-700-normal.woff) format("woff");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
+    U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
 
 /* eb-garamond-latin-400-normal */
 @font-face {
@@ -44,7 +64,8 @@
   font-style: normal;
   font-display: swap;
   font-weight: 400;
-  src: url(@fontsource/eb-garamond/files/eb-garamond-latin-400-normal.woff2)
+  src:
+    url(@fontsource/eb-garamond/files/eb-garamond-latin-400-normal.woff2)
       format("woff2"),
     url(@fontsource/eb-garamond/files/eb-garamond-latin-400-normal.woff)
       format("woff");
@@ -59,7 +80,8 @@
   font-style: normal;
   font-display: swap;
   font-weight: 500;
-  src: url(@fontsource/eb-garamond/files/eb-garamond-latin-500-normal.woff2)
+  src:
+    url(@fontsource/eb-garamond/files/eb-garamond-latin-500-normal.woff2)
       format("woff2"),
     url(@fontsource/eb-garamond/files/eb-garamond-latin-500-normal.woff)
       format("woff");
@@ -74,7 +96,8 @@
   font-style: normal;
   font-display: swap;
   font-weight: 700;
-  src: url(@fontsource/eb-garamond/files/eb-garamond-latin-700-normal.woff2)
+  src:
+    url(@fontsource/eb-garamond/files/eb-garamond-latin-700-normal.woff2)
       format("woff2"),
     url(@fontsource/eb-garamond/files/eb-garamond-latin-700-normal.woff)
       format("woff");
@@ -119,9 +142,8 @@
   --letter-spacing-8: -0.01em;
   --letter-spacing-9: -0.025em;
 
-  --font-serif: "EB Garamond", serif;
-  --font-sans-serif: "Archivo", -apple-system, BlinkMacSystemFont, Roboto,
-    "Helvetica Neue", system-ui, sans-serif, "Apple Color Emoji";
+  --font-serif: "EB Garamond", "Times New Roman", serif;
+  --font-sans-serif: "Archivo", "Helvetica Neue", sans-serif;
 
   /* default values */
   --default-font-family: var(--font-sans-serif);
@@ -150,13 +172,6 @@
   --heading-line-height-7: 2.25rem;
   --heading-line-height-8: 2.5rem;
   --heading-line-height-9: 4rem;
-
-  /* Quote */
-  --quote-font-family: "Times New Roman", "Times", serif;
-  --quote-font-size-adjust: 1.18;
-  --quote-font-style: italic;
-  --quote-font-weight: inherit;
-  --quote-letter-spacing: -0.025em;
 }
 
 body {
