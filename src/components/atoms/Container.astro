@@ -8,8 +8,10 @@ interface Props {
 const { as: As = "div", size = "3" } = Astro.props;
 ---
 
-<As class:list={[Astro.props.class, "container", `container-size-${size}`]}>
-  <slot />
+<As class:list={["container", `container-size-${size}`]}>
+  <div class:list={[Astro.props.class, "inner-container"]}>
+    <slot />
+  </div>
 </As>
 
 <style>
@@ -21,24 +23,21 @@ const { as: As = "div", size = "3" } = Astro.props;
 
   .container-size-1 {
     max-inline-size: var(--container-1);
-    inline-size: 100%;
   }
 
   .container-size-2 {
     max-inline-size: var(--container-2);
-    inline-size: 100%;
   }
 
   .container-size-3 {
     max-inline-size: var(--container-3);
-    inline-size: 100%;
   }
 
   .container-size-4 {
     max-inline-size: var(--container-4);
-    inline-size: 100%;
   }
 
-
-
+  .inner-container {
+    inline-size: fit-content;
+  }
 </style>

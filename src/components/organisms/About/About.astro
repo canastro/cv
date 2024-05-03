@@ -21,18 +21,21 @@ import Text from "../../atoms/Text.astro";
       />
     </div>
 
-    <Text as="p">
-      My name is Ricardo Canastro, a 37-year-old Software Developer from Porto,
-      Portugal, proud father of two and blessed with a beautiful wife.
-    </Text>
+    <div class="text">
+      <Text as="p">
+        My name is Ricardo Canastro, a 37-year-old Software Developer from
+        Porto, Portugal, proud father of two and blessed with a beautiful wife.
+      </Text>
 
-    <Text as="p">
-      From my earliest years, I found myself captivated by computers,
-      undoubtedly fueled by my love for gaming. With over 13 years of immersion
-      in the software development industry, I can affirm my unwavering
-      dedication to my profession. My thirst for knowledge is unyielding, and I
-      am committed to both expanding my expertise and imparting it to others.
-    </Text>
+      <Text as="p">
+        From my earliest years, I found myself captivated by computers,
+        undoubtedly fueled by my love for gaming. With over 13 years of
+        immersion in the software development industry, I can affirm my
+        unwavering dedication to my profession. My thirst for knowledge is
+        unyielding, and I am committed to both expanding my expertise and
+        imparting it to others.
+      </Text>
+    </div>
   </div>
 </section>
 
@@ -45,6 +48,12 @@ import Text from "../../atoms/Text.astro";
 
   .content {
     display: flex;
+    flex-direction: row;
+    gap: var(--space-5);
+  }
+
+  .text {
+    display: flex;
     flex-direction: column;
     gap: var(--space-5);
   }
@@ -56,7 +65,7 @@ import Text from "../../atoms/Text.astro";
   }
 
   @media screen and (min-width: 768px) {
-    .content {
+    .text {
       inline-size: 50ch;
     }
   }
