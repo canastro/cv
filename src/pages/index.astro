@@ -15,12 +15,17 @@ import Projects from "../components/organisms/Projects/Projects.astro";
       <br /> based in Portugal, specializing in frontend development.
     </Heading>
 
-    <div class="content">
-      <About />
-      <Career />
-    </div>
+    <About />
+
+    <hr />
+
+    <Career />
+
+    <hr />
 
     <Projects />
+
+    <hr />
 
     <Contacts />
   </Container>
@@ -32,7 +37,7 @@ import Projects from "../components/organisms/Projects/Projects.astro";
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: var(--space-10);
+    gap: var(--space-8);
     padding-block: var(--space-9);
     min-block-size: 100dvh;
   }
@@ -45,6 +50,16 @@ import Projects from "../components/organisms/Projects/Projects.astro";
     display: flex;
     flex-direction: row;
     gap: var(--space-9);
+  }
+
+  hr {
+    margin-inline: -1rem;
+    inline-size: 272px;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid var(--text-color-muted);
+    margin-block: 0;
+    opacity: 0.5;
   }
 
   @media screen and (max-width: 1024px) {

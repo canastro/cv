@@ -45,8 +45,9 @@ import ProjectCard from "./molecules/ProjectCard.astro";
       skills={["react", "tailwind"]}
       status="DONE"
     >
-      Created a working prototype for a custom video player with a built-in shopping experience where
-      user's could buy products shown in pre-configured scenes.
+      Created a working prototype for a custom video player with a built-in
+      shopping experience where user's could buy products shown in
+      pre-configured scenes.
     </ProjectCard>
 
     <ProjectCard
@@ -96,13 +97,13 @@ import ProjectCard from "./molecules/ProjectCard.astro";
 
   ul {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 40ch));
+    grid-template-columns: repeat(2, minmax(0, 40ch));
     gap: var(--space-6);
   }
 
   @media screen and (max-width: 920px) {
     ul {
-      grid-template-columns: repeat(2, minmax(0, 40ch));
+      grid-template-columns: repeat(1, minmax(0, 40ch));
     }
   }
 
