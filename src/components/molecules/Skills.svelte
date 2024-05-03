@@ -49,7 +49,7 @@
     padding-inline: var(--space-2);
     border-radius: var(--radius-6);
     color: var(--text-color-muted);
-    opacity: 0.7;
+    opacity: 0.9;
   }
 
   button {

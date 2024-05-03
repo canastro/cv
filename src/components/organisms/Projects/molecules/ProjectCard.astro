@@ -13,7 +13,7 @@ interface Props {
 const { name, url, status } = Astro.props;
 ---
 
-<div class="project-card--root">
+<li class="project-card--root">
   <header>
     <Link href={url}>
       <Heading as="h3" size="6" weight="regular">{name}</Heading>
@@ -31,7 +31,7 @@ const { name, url, status } = Astro.props;
   <Text>
     <slot />
   </Text>
-</div>
+</li>
 
 <style>
   .project-card--root {
