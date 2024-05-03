@@ -16,6 +16,7 @@
     "@fontsource/eb-garamond": "^5.0.18",
     "@fontsource/lora": "^5.0.17",
     "astro": "^4.7.1",
+    "astro-imagetools": "^0.9.0",
     "prettier": "^3.2.5",
     "prettier-plugin-astro": "^0.13.0",
     "svelte": "^4.2.15",

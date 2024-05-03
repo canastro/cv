@@ -1,4 +1,6 @@
 ---
+import { Img } from "astro-imagetools/components";
+
 import Heading from "../../atoms/Heading.astro";
 import Text from "../../atoms/Text.astro";
 ---
@@ -9,7 +11,13 @@ import Text from "../../atoms/Text.astro";
   </Heading>
 
   <div class="content">
-    <img src="/images/avatar.jpeg" alt="Ricardo Canastro" />
+    <Img
+      src="/images/avatar.jpeg"
+      alt="Ricardo Canastro"
+      height={240}
+      width={240}
+      placeholder="tracedSVG"
+    />
 
     <Text as="p">
       My name is Ricardo Canastro, a 37-year-old Software Developer from Porto,
