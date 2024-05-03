@@ -1,5 +1,6 @@
 ---
 import Heading from "../../../atoms/Heading.astro";
+import Link from "../../../atoms/Link.astro";
 import Text from "../../../atoms/Text.astro";
 
 interface Props {
@@ -13,8 +14,11 @@ const { name, url, status } = Astro.props;
 ---
 
 <div class="project-card--root">
-  <a href={url}>
-    <Heading as="h3" size="6" weight="regular">{name}</Heading>
+  <header>
+    <Link href={url}>
+      <Heading as="h3" size="6" weight="regular">{name}</Heading>
+    </Link>
+
     {
       status === "WIP" && (
         <Text size="2" style="italic">
@@ -22,7 +26,7 @@ const { name, url, status } = Astro.props;
         </Text>
       )
     }
-  </a>
+  </header>
 
   <Text>
     <slot />
@@ -37,16 +41,9 @@ const { name, url, status } = Astro.props;
     border-radius: var(--radius-3);
   }
 
-  a {
-    text-decoration: none;
-    display: flex;
-    flex-direction: row;
+  header {
+    display: inline-flex;
     align-items: flex-end;
-    gap: var(--space-4);
-    color: var(--text-color);
-  }
-
-  a:hover :global(h3) {
-    text-decoration: underline;
+    gap: var(--space-2);
   }
 </style>

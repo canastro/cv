@@ -13,10 +13,12 @@ const { href, target='_blank' } = Astro.props;
     a {
         color: var(--text-color);
         font-weight: var(--font-weight-medium);
-        text-decoration: underline;
+        text-decoration: none;
+        color: var(--text-color);
     }
 
     a:hover {
         color: var(--text-color-muted);
+        text-decoration: underline;
     }
 </style>
