@@ -1,14 +1,14 @@
 :root {
-  --background-color-light: #f3f4ef;
+  --background-color-light: #eeefe9;
   --background-color-dark: #2d2d2d;
 
-  --card-background-color-dark: #3f4046;
-  --card-background-color-light: #c1c2b9;
+  --accent-color-dark: #3f4046;
+  --accent-color-light: #c1c2b9;
 
   --text-color-dark: #111;
   --text-color-light: #f3f4ef;
   --text-color-muted-dark: #5f5f5f;
-  --text-color-muted-light: hsla(0,0%,100%,.7);
+  --text-color-muted-light: hsla(0, 0%, 100%, 0.7);
 
   --container-1: 448px;
   --container-2: 688px;
@@ -39,13 +39,17 @@
   body {
     --background-color: var(--background-color-light);
     --background-color-contrast: var(--background-color-dark);
-    
-    --card-background-color: var(--card-background-color-light);
-    
+
+    --accent-color: var(--accent-color-light);
+
     --text-color: var(--text-color-dark);
     --text-color-muted: var(--text-color-muted-dark);
-    
+
     color: var(--text-color-dark);
+    
+    ::selection {
+      background: var(--accent-color);
+    }
   }
 }
 
@@ -54,11 +58,17 @@
     --background-color: var(--background-color-dark);
     --background-color-contrast: var(--background-color-light);
 
-    --card-background-color: var(--card-background-color-dark);
-    
+    --accent-color: var(--accent-color-dark);
+
     --text-color: var(--text-color-light);
     --text-color-muted: var(--text-color-muted-light);
-    
+
     color: var(--text-color-light);
+
+
+    
+    ::selection {
+      background: var(--accent-color);
+    }
   }
 }

@@ -85,30 +85,18 @@ import ProjectCard from "./molecules/ProjectCard.astro";
     display: flex;
     flex-direction: column;
     gap: var(--space-6);
+    max-inline-size: 50ch;
   }
 
   header {
     display: flex;
     flex-direction: column;
     gap: var(--space-4);
-    max-inline-size: 50ch;
   }
 
   ul {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 40ch));
+    display: flex;
+    flex-direction: column;
     gap: var(--space-6);
-  }
-
-  @media screen and (max-width: 920px) {
-    ul {
-      grid-template-columns: repeat(2, minmax(0, 40ch));
-    }
-  }
-
-  @media screen and (max-width: 768px) {
-    ul {
-      grid-template-columns: 1fr;
-    }
   }
 </style>

@@ -1,41 +1,63 @@
 ---
+import Heading from "../../atoms/Heading.astro";
+import Link from "../../atoms/Link.astro";
+import Text from "../../atoms/Text.astro";
 import EmailIcon from "../../atoms/icons/EmailIcon.astro";
 import LinkedInIcon from "../../atoms/icons/LinkedInIcon.astro";
 import TwitterIcon from "../../atoms/icons/TwitterIcon.astro";
 ---
 
-<div class="contacts">
-    <a 
-        href="mailto:ricardocanastro@gmail.com" 
-        aria-label="email ricardocanastro@gmail.com"
-    >
-        <EmailIcon size="3rem" />
-    </a>
-    <a
+<section>
+  <header>
+    <Heading as="h2" class="main-title" size="8" weight="regular">
+      Elsewhere
+    </Heading>
+
+    <Text> You can find me around the web as @canastro in most places. </Text>
+  </header>
+
+  <ul>
+    <li>
+      <Link
         href="https://www.linkedin.com/in/ricardocanastro/"
         target="_blank"
-        rel="noreferrer noopener"
         aria-label="linkedin ricardocanastro"
-    >
-        <LinkedInIcon size="3rem" />
-    </a>
-    <a
+      >
+        Gitub
+      </Link>
+    </li>
+    <li>
+      <Link
+        href="https://www.linkedin.com/in/ricardocanastro/"
+        target="_blank"
+        aria-label="linkedin ricardocanastro"
+      >
+        LinkedIn
+      </Link>
+    </li>
+    <li>
+      <Link
         href="https://twitter.com/canastro"
         target="_blank"
-        rel="noreferrer noopener"
-        aria-label="twitter @canastro"
-    >
-        <TwitterIcon size="3rem" />
-    </a>
-</div>
+        aria-label="linkedin ricardocanastro"
+      >
+        Twitter
+      </Link>
+    </li>
+  </ul>
+</section>
 
 <style>
-  .contacts {
+  section {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    gap: var(--space-6);
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
     gap: var(--space-4);
-    padding-block-start: var(--space-9);
-    margin-inline: auto;
-    margin-block-start: auto;
+    max-inline-size: 50ch;
   }
 </style>
