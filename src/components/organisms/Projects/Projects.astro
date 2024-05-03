@@ -1,0 +1,114 @@
+---
+import Heading from "../../atoms/Heading.astro";
+import Text from "../../atoms/Text.astro";
+import Link from "../../atoms/Link.astro";
+import ProjectCard from "./molecules/ProjectCard.astro";
+---
+
+<section>
+  <header>
+    <Heading as="h2" size="8" weight="regular"> Side projects </Heading>
+
+    <Text>
+      On my journey as a developer, I've had the opportunity to work on a
+      variety of side projects. Some were just for fun, others were to learn a
+      new technology, and a few were for clients. Here are some of the projects
+      I've worked on.
+    </Text>
+  </header>
+
+  <ul>
+    <ProjectCard
+      name="Rome Foundation"
+      url="https://apps.apple.com/us/app/rome-foundation/id1643957751"
+      skills={["flutter"]}
+      status="DONE"
+    >
+      Flutter iOS and Android app for the Rome Foundation, a non-profit
+      organization dedicated to improving the lives of people with functional GI
+      disorders.
+    </ProjectCard>
+
+    <ProjectCard
+      name="Custom's Tshirt designer"
+      url="https://create.asicustom.com/product/3/designer"
+      skills={["react", "konva", "tailwind"]}
+      status="DONE"
+    >
+      Created a custom t-shirt designer for ASI Custom, a company that provides
+      custom apparel and promotional products.
+    </ProjectCard>
+
+    <ProjectCard
+      name="Video-scene shopping"
+      url="https://create.asicustom.com/product/3/designer"
+      skills={["react", "tailwind"]}
+      status="DONE"
+    >
+      Created a working prototype for a custom video player with a built-in shopping experience where
+      user's could buy products shown in pre-configured scenes.
+    </ProjectCard>
+
+    <ProjectCard
+      name="Sleep tight little one"
+      url="https://apps.apple.com/pt/app/sleep-tight-little-one/id1567792209?platform=iphone"
+      skills={["flutter"]}
+      status="DONE"
+    >
+      As I was learning Flutter, I created this small application to help
+      parents put their children to sleep.
+    </ProjectCard>
+
+    <ProjectCard
+      name="Automata"
+      url="https://github.com/rows/automata"
+      skills={["dart"]}
+      status="DONE"
+    >
+      While developing <Link href="rows.com">Rows'</Link> flutter app, I created
+      a small library to create state machines and state charts.
+    </ProjectCard>
+
+    <ProjectCard
+      name="Chronical"
+      url="#"
+      skills={["next.js", "react", "postgresql", "effect"]}
+      status="WIP"
+    >
+      A web3 platform to empower content creators to monetize their content.
+    </ProjectCard>
+  </ul>
+</section>
+
+<style>
+  section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    max-inline-size: 50ch;
+  }
+
+  ul {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 40ch));
+    gap: var(--space-6);
+  }
+
+  @media screen and (max-width: 920px) {
+    ul {
+      grid-template-columns: repeat(2, minmax(0, 40ch));
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    ul {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

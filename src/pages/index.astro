@@ -5,6 +5,7 @@ import Container from "../components/atoms/Container.astro";
 import Career from "../components/organisms/Career/Career.astro";
 import About from "../components/organisms/About/About.astro";
 import Contacts from "../components/organisms/Contacts/Contacts.astro";
+import Projects from "../components/organisms/Projects/Projects.astro";
 ---
 
 <Layout title="Ricardo Canastro - CV">
@@ -19,6 +20,8 @@ import Contacts from "../components/organisms/Contacts/Contacts.astro";
       <Career />
     </div>
 
+    <Projects />
+
     <Contacts />
   </Container>
 </Layout>
@@ -29,7 +32,7 @@ import Contacts from "../components/organisms/Contacts/Contacts.astro";
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: var(--space-7);
+    gap: var(--space-10);
     padding-block: var(--space-9);
     min-block-size: 100dvh;
   }

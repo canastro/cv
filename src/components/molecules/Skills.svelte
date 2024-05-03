@@ -61,6 +61,7 @@
 
   li:hover:has(button) {
     opacity: 1;
-    background-color: var(--bg-bridge);
+    background-color: var(--background-color);
+    color: var(--text-color);
   }
 </style>

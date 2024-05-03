@@ -1,13 +1,15 @@
 ---
 import Heading from "../../atoms/Heading.astro";
-import CareerEntry from "./molecules/CareerEntry.astro";
+import JobCard from "./molecules/JobCard.astro";
 ---
 
 <section>
-  <Heading class="main-title" size="8" weight="regular"> Career </Heading>
+  <Heading as="h2" class="main-title" size="8" weight="regular">
+    Career
+  </Heading>
 
   <ul>
-    <CareerEntry
+    <JobCard
       period="2022 - 2024"
       role="Founding Engineer"
       company={{ name: "Arro", url: "https://www.arro.co" }}
@@ -25,19 +27,19 @@ import CareerEntry from "./molecules/CareerEntry.astro";
     >
       I joined Arro as one of the founding engineers, tasked with developing an
       AI Research Assistant to support teams in crafting superior products.
-    </CareerEntry>
+    </JobCard>
 
-    <CareerEntry
+    <JobCard
       period="2018 - 2022"
       role="Lead Frontend Developer"
       company={{ name: "Rows", url: "https://www.rows.com" }}
-      skills={["typescript", "react", "konva", "mobx", "graphql", "flutter"]}
+      skills={["react", "flutter", "konva", "antlr", "mobx", "graphql", "typescript"]}
     >
       Joined Rows at an early stage to help build the next generation of
       spreadsheet tools.
-    </CareerEntry>
+    </JobCard>
 
-    <CareerEntry
+    <JobCard
       period="2014 - 2018"
       role="Senior Fullstack Developer"
       company={{ name: "PaddyPower - Betfair", url: "https://www.rows.com" }}
@@ -45,7 +47,7 @@ import CareerEntry from "./molecules/CareerEntry.astro";
     >
       At PaddyPower Betfair, my team led the development of a platform aimed at
       accelerating the creation and distribution of new internal tools.
-    </CareerEntry>
+    </JobCard>
   </ul>
 </section>
 
@@ -53,18 +55,13 @@ import CareerEntry from "./molecules/CareerEntry.astro";
   section {
     display: flex;
     flex-direction: column;
-    gap: var(--space-4);
+    gap: var(--space-6);
     max-inline-size: 50ch;
   }
 
   ul {
     display: flex;
     flex-direction: column;
-    gap: var(--space-7);
-  }
-
-  li {
-    display: flex;
-    flex-direction: column;
+    gap: var(--space-6);
   }
 </style>
