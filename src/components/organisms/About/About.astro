@@ -48,7 +48,7 @@ import Text from "../../atoms/Text.astro";
 
   .content {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: var(--space-5);
   }
 
@@ -62,11 +62,20 @@ import Text from "../../atoms/Text.astro";
     border-radius: var(--radius-3);
     inline-size: fit-content;
     overflow: hidden;
+    inline-size: 240px;
+    block-size: 240px;
+    min-inline-size: 240px;
+    min-block-size: 240px;
   }
 
   @media screen and (min-width: 768px) {
+    .content {
+      flex-direction: row;
+    }
+
     .text {
-      inline-size: 50ch;
+      max-inline-size: 50ch;
+      inline-size: 100%;
     }
   }
 </style>
