@@ -16,7 +16,6 @@ const { as: As = "div", size = "3" } = Astro.props;
 
 <style>
   .container {
-    margin-inline: auto;
     padding-inline: var(--space-4);
     box-sizing: border-box;
   }
@@ -44,6 +43,12 @@ const { as: As = "div", size = "3" } = Astro.props;
   @media screen and (min-width: 768px) {
     .container {
       padding-inline: var(--space-9);
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .container {
+      padding-inline: var(--space-10);
     }
   }
 </style>

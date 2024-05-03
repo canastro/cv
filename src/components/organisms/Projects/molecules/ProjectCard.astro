@@ -1,5 +1,4 @@
 ---
-import Heading from "../../../atoms/Heading.astro";
 import Link from "../../../atoms/Link.astro";
 import Text from "../../../atoms/Text.astro";
 
@@ -16,7 +15,7 @@ const { name, url, status } = Astro.props;
 <li class="project-card--root">
   <header>
     <Link href={url}>
-      <Heading as="h3" size="6" weight="regular">{name}</Heading>
+      <Text as="h3" size="5" weight="regular">{name}</Text>
     </Link>
 
     {

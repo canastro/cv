@@ -46,14 +46,8 @@ import Projects from "../components/organisms/Projects/Projects.astro";
     max-inline-size: 30ch;
   }
 
-  .content {
-    display: flex;
-    flex-direction: row;
-    gap: var(--space-9);
-  }
-
   hr {
-    margin-inline: -1rem;
+    margin-inline: 0;
     inline-size: 272px;
     height: 1px;
     border: 0;
@@ -62,9 +56,9 @@ import Projects from "../components/organisms/Projects/Projects.astro";
     opacity: 0.5;
   }
 
-  @media screen and (max-width: 1024px) {
-    .content {
-      flex-direction: column;
+  @media screen and (min-width: 768px) {
+    hr {
+      margin-inline: -1rem;
     }
   }
 </style>

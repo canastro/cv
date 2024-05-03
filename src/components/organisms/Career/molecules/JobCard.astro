@@ -1,5 +1,6 @@
 ---
 import Link from "../../../atoms/Link.astro";
+import Heading from "../../../atoms/Heading.astro";
 import Text from "../../../atoms/Text.astro";
 import Skills from "../../../molecules/Skills.svelte";
 
@@ -17,11 +18,13 @@ const { role, period, company, skills } = Astro.props;
 ---
 
 <li class="root">
-  <Text size="6">{period}</Text>
+  <header>
+    <Text as="h3" size="5" weight="regular">
+      {role} at <Link href={company.url} target="_blank">{company.name}</Link>
+    </Text>
 
-  <Text size="4">
-    {role} at <Link href={company.url} target="_blank">{company.name}</Link>
-  </Text>
+    <Text size="2"  color="muted" weight="bold">{period}</Text>
+  </header>
 
   <Text color="muted">
     <slot />
@@ -32,6 +35,12 @@ const { role, period, company, skills } = Astro.props;
 
 <style>
   .root {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+  }
+
+  header {
     display: flex;
     flex-direction: column;
   }
