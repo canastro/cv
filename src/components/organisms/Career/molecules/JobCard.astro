@@ -5,6 +5,7 @@ import Text from "../../../atoms/Text.astro";
 import Skills from "../../../molecules/Skills.svelte";
 
 interface Props {
+  id: string;
   period: string;
   role: string;
   company: {
@@ -14,10 +15,10 @@ interface Props {
   skills: string[];
 }
 
-const { role, period, company, skills } = Astro.props;
+const { id, role, period, company, skills } = Astro.props;
 ---
 
-<li class="root">
+<li id={id} class="root" data-expanded="false">
   <header>
     <Text as="h3" size="5" weight="regular">
       {role} at <Link href={company.url} target="_blank">{company.name}</Link>
@@ -26,12 +27,53 @@ const { role, period, company, skills } = Astro.props;
     <Text size="2"  color="muted" weight="bold">{period}</Text>
   </header>
 
+
   <Text color="muted">
     <slot />
   </Text>
 
+  <job-details expanded={false}>
+      <Text as="div" class="job-details--content" color="muted">
+        <slot name="details" />
+      </Text>
+
+    <button type="button">Show more...</button>
+  </job-details>
+
   <Skills client:only="svelte" {skills} />
 </li>
+
+<script>
+  class JobDetails extends HTMLElement {
+    button: HTMLButtonElement;
+
+    constructor() {
+      super();
+
+      this.button = this.querySelector('button')!;
+      this.button.addEventListener('click', () => {
+        this.expanded = !this.expanded;
+        console.log('expanded', this.expanded);
+      });
+    }
+
+    get expanded() {
+      return this.hasAttribute('expanded');
+    }
+
+    set expanded(val:boolean) {
+      if (val) {
+        this.setAttribute('expanded', '');
+        this.button.textContent = 'Show less...';
+      } else {
+        this.removeAttribute('expanded');
+        this.button.textContent = 'Show more...';
+      }
+    }
+  }
+
+  customElements.define('job-details', JobDetails);
+</script>
 
 <style>
   .root {
@@ -44,4 +86,29 @@ const { role, period, company, skills } = Astro.props;
     display: flex;
     flex-direction: column;
   }
+
+  button {
+    background-color: transparent;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color-muted);
+    font-size: var(--font-size-2);
+    line-height: var(--line-height-2);
+    letter-spacing: var(--letter-spacing-2);
+  }
+
+  button:hover {
+    color: var(--text-color);
+  }
+
+  job-details :global(.job-details--content) {
+    display: none;
+  }
+
+  job-details[expanded] :global(.job-details--content) {
+    padding-block: var(--space-3);
+    display: block;
+  }
+
 </style>

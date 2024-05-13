@@ -1,5 +1,6 @@
 ---
 import Heading from "../../atoms/Heading.astro";
+import Text from "../../atoms/Text.astro";
 import JobCard from "./molecules/JobCard.astro";
 ---
 
@@ -8,8 +9,9 @@ import JobCard from "./molecules/JobCard.astro";
     Career
   </Heading>
 
-  <ul>
+  <ul class="jobs-list">
     <JobCard
+      id="arro"
       period="2022 - 2024"
       role="Founding Engineer"
       company={{ name: "Arro", url: "https://www.arro.co" }}
@@ -27,9 +29,22 @@ import JobCard from "./molecules/JobCard.astro";
     >
       I joined Arro as one of the founding engineers, tasked with developing an
       AI Research Assistant to support teams in crafting superior products.
+
+      <div slot="details">
+        <Text weight="bold" size="3">A few highlights of my time at arro:</Text>
+        <ul class="job-details-list">
+          <li>Developed a series of proof-of-concepts to test various hypotheses.</li>
+          <li>Created a modular monolithic Node.js backend with Hexagonal Architecture.</li>
+          <li>Developed a design system.</li>
+          <li>Implemented a real-time chat system including interface design, event-sourcing, and real-time communication protocols.</li>
+          <li>Built a proof-of-concept for a voice-based chat system.</li>
+          <li>Built a proof-of-concept Web SDK to embed Arro in customer's websites.</li>
+        </ul>
+      </div>
     </JobCard>
 
     <JobCard
+      id="rows"
       period="2018 - 2022"
       role="Lead Frontend Developer"
       company={{ name: "Rows", url: "https://www.rows.com" }}
@@ -37,9 +52,20 @@ import JobCard from "./molecules/JobCard.astro";
     >
       Joined Rows at an early stage to help build the next generation of
       spreadsheet tools.
+      
+      <div slot="details">
+        <Text weight="bold" size="3">A few highlights of my time at rows:</Text>
+        <ul class="job-details-list">
+          <li>Created our in-house spreadsheet engine with React.js + Canvas;</li>
+          <li>Created a formula composer parser with ANTLR for both Typescript and Dart;</li>
+          <li>Created a open-source dart statemachine library;</li>
+          <li>Created a desktop application with Dart/Flutter</li>
+        </ul>
+      </div>
     </JobCard>
 
     <JobCard
+      id="ppb"
       period="2014 - 2018"
       role="Senior Fullstack Developer"
       company={{ name: "PaddyPower - Betfair", url: "https://www.rows.com" }}
@@ -47,6 +73,13 @@ import JobCard from "./molecules/JobCard.astro";
     >
       At PaddyPower Betfair, my team led the development of a platform aimed at
       accelerating the creation and distribution of new internal tools.
+      
+      <div slot="details">
+        <Text weight="bold" size="3">A few highlights of my time at paddypowerbetfair:</Text>
+        <ul class="job-details-list">
+          <li> Created a micro-frontend architecture to allow teams from multiple offices to create and deploy internal tools</li>
+        </ul>
+      </div>
     </JobCard>
   </ul>
 </section>
@@ -59,9 +92,17 @@ import JobCard from "./molecules/JobCard.astro";
     max-inline-size: 50ch;
   }
 
-  ul {
+  ul.jobs-list {
     display: flex;
     flex-direction: column;
     gap: var(--space-6);
+  }
+
+  ul.job-details-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+    list-style: disc;
+    list-style-position: inside;
   }
 </style>
