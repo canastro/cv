@@ -5,7 +5,7 @@
 
   const N_VISIBLE_ITEMS = 4;
   const visibleSkills = skills.slice(0, N_VISIBLE_ITEMS);
-  const hiddenSkills = skills.slice(N_VISIBLE_ITEMS + 1);
+  const hiddenSkills = skills.slice(N_VISIBLE_ITEMS);
 
   const toggle = () => {
     showHiddenSkills = !showHiddenSkills;
